@@ -1,0 +1,36 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://xst6iwje8veg"
+path="res://.godot/imported/ISOCTEUR V1.ttf-c30283543203ce646655c74b925b0448.fontdata"
+
+[deps]
+
+source_file="res://font/OnlineWebFonts_COM_b671ac6ae2489f269f3fa7afda77430d/ISOCTEUR V1/ISOCTEUR V1.ttf"
+dest_files=["res://.godot/imported/ISOCTEUR V1.ttf-c30283543203ce646655c74b925b0448.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

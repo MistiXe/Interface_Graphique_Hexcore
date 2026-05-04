@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cx7povegi60js"]
+
+[ext_resource type="Script" uid="uid://bhodp3o2vxf1p" path="res://inucshop.gd" id="1_uf66d"]
+[ext_resource type="Script" uid="uid://b73od0w2dl2lx" path="res://button.gd" id="2_6twpu"]
+[ext_resource type="FontFile" uid="uid://ch63yeabw68ce" path="res://SourceSans3-Italic-VariableFont_wght.ttf" id="2_7s3im"]
+[ext_resource type="FontFile" uid="uid://cmufw7j1va1s5" path="res://SourceSans3-VariableFont_wght.ttf" id="3_bdygh"]
+[ext_resource type="Texture2D" uid="uid://bbsxtnuyida83" path="res://assets/loupe.png" id="4_v2jg4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7t8n7"]
+bg_color = Color(0.80049086, 0.8004908, 0.8004906, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="InucShop" type="Control" unique_id=74485473]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uf66d")
+
+[node name="background" type="ColorRect" parent="." unique_id=1680258602]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9411765, 0.9411765, 0.9411765, 1)
+
+[node name="titre" type="Label" parent="." unique_id=1995633877]
+layout_mode = 1
+offset_right = 83.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_7s3im")
+theme_override_font_sizes/font_size = 50
+text = "INUC Shop"
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=961815264]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 100.0
+offset_bottom = 132.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bdygh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7t8n7")
+text = "Rechercher le jeu"
+right_icon = ExtResource("4_v2jg4")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1884544878]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 150.0
+offset_right = 20.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameGrid" type="GridContainer" parent="ScrollContainer" unique_id=602574802]
+layout_mode = 2
+columns = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/GameGrid" unique_id=1222562942]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/GameGrid" unique_id=796798973]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="Button" type="Button" parent="." unique_id=581218027]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -61.0
+offset_bottom = 31.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Retour
+"
+script = ExtResource("2_6twpu")
+
+[connection signal="text_changed" from="LineEdit" to="." method="_on_recherche_text_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_bouton_retour_pressed"]

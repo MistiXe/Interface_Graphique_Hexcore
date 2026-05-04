@@ -1,0 +1,13 @@
+{
+  "jeux": [
+	{
+	  "id": "inuc_fighter",
+	  "titre": "Champollion Fighter",
+	  "icone": "res://assets//hecker_logo.jpg",
+	  "download_url": "https://github.com/MistiXe/jeux_inuc/releases/download/v0.7.3/Champollion_fighter_v0.7.3.exe",
+	  "exec_name": "Champollion_fighter_v0.7.3.exe",
+	  "description": "Un jeu de combat entre célébrités de l'INUC	"
+	},
+	
+  ]
+}

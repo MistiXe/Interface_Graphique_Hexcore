@@ -1,0 +1,899 @@
+[gd_scene format=3 uid="uid://biljxj1qnle72"]
+
+[ext_resource type="Script" uid="uid://b853w3getdb6e" path="res://interfacev_2.gd" id="1_t7j7y"]
+[ext_resource type="Script" uid="uid://be21t7fgbmms8" path="res://barrehaute.gd" id="1_uacxa"]
+[ext_resource type="FontFile" uid="uid://cmufw7j1va1s5" path="res://SourceSans3-VariableFont_wght.ttf" id="2_uwoio"]
+[ext_resource type="Texture2D" uid="uid://d20swpjwj4te3" path="res://youtube_logo-removebg-preview.png" id="4_qee8x"]
+[ext_resource type="Texture2D" uid="uid://clw11shmu4qx8" path="res://chrome_logo.png" id="5_y6cj8"]
+[ext_resource type="Script" uid="uid://bl4m4fgeme2k7" path="res://texture_button.gd" id="6_vt3h0"]
+[ext_resource type="Texture2D" uid="uid://c2sjbyteba3tw" path="res://inushop-removebg-preview.png" id="6_y6cj8"]
+[ext_resource type="Texture2D" uid="uid://btby6klu1d0k7" path="res://assets/manette.png" id="7_rij8k"]
+[ext_resource type="Texture2D" uid="uid://btxabesyv7c4x" path="res://assets/wifi.png" id="7_thnk4"]
+[ext_resource type="Texture2D" uid="uid://uaplfxitlahp" path="res://assets/parametres.png" id="8_dk2i6"]
+[ext_resource type="Script" uid="uid://ccfwura5cwp0r" path="res://texture_button_2.gd" id="8_u7ocy"]
+[ext_resource type="Texture2D" uid="uid://mahbw35pwcps" path="res://assets/eteindre.png" id="9_a41ws"]
+[ext_resource type="Script" uid="uid://bp61wnv77qbmv" path="res://texture_button_4.gd" id="9_thnk4"]
+[ext_resource type="Script" uid="uid://bojj610oak7na" path="res://texture_button_3.gd" id="10_1yvax"]
+[ext_resource type="Texture2D" uid="uid://ce7jwjpbo6epn" path="res://assets/nes.png" id="17_u7ocy"]
+[ext_resource type="Script" uid="uid://b4i3au1dyimia" path="res://clavier.gd" id="18_1yvax"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hqfr"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1yvax"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6488743, 0.7374995, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hf66k"]
+bg_color = Color(0.9999997, 0.18211758, 0.7574042, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7047503, 0.041404724, 0.9999853, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6cj8"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qee8x"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe3x5"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7ocy"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rij8k"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gr7w5"]
+bg_color = Color(0.17254902, 0.17254902, 0.17254902, 0.9529412)
+
+[node name="Control" type="Control" unique_id=710996765]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t7j7y")
+
+[node name="CenterContainer" type="Panel" parent="." unique_id=701925170]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5hqfr")
+
+[node name="barrehaute" type="HBoxContainer" parent="CenterContainer" unique_id=717973619]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -52.0
+offset_right = -12.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/separation = 10
+script = ExtResource("1_uacxa")
+
+[node name="wifi" type="TextureRect" parent="CenterContainer/barrehaute" unique_id=987774463]
+layout_mode = 2
+
+[node name="date" type="Label" parent="CenterContainer/barrehaute" unique_id=308733170]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_uwoio")
+theme_override_font_sizes/font_size = 20
+
+[node name="heure" type="Label" parent="CenterContainer/barrehaute" unique_id=2013719693]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_uwoio")
+theme_override_font_sizes/font_size = 20
+
+[node name="barre_reg" type="PanelContainer" parent="CenterContainer" unique_id=217516660]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 264.0
+grow_horizontal = 2
+scale = Vector2(1.5, 1.5)
+theme_override_styles/panel = SubResource("StyleBoxFlat_1yvax")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/barre_reg" unique_id=47411354]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="CenterContainer/barre_reg/HBoxContainer" unique_id=1134531644]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("6_vt3h0")
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/barre_reg/HBoxContainer/TextureButton" unique_id=1740700449]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 20.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_rij8k")
+
+[node name="TextureButton2" type="TextureButton" parent="CenterContainer/barre_reg/HBoxContainer" unique_id=111534429]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("8_u7ocy")
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/barre_reg/HBoxContainer/TextureButton2" unique_id=281142271]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 20.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_thnk4")
+
+[node name="TextureButton3" type="TextureButton" parent="CenterContainer/barre_reg/HBoxContainer" unique_id=35780954]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("10_1yvax")
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/barre_reg/HBoxContainer/TextureButton3" unique_id=2096760388]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 20.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_dk2i6")
+
+[node name="TextureButton4" type="TextureButton" parent="CenterContainer/barre_reg/HBoxContainer" unique_id=1699718437]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("9_thnk4")
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/barre_reg/HBoxContainer/TextureButton4" unique_id=2071318236]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 20.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_a41ws")
+
+[node name="DescriptionAction" type="Label" parent="CenterContainer" unique_id=961862068]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -52.5
+offset_top = 100.0
+offset_right = 52.5
+offset_bottom = 187.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_uwoio")
+theme_override_font_sizes/font_size = 30
+text = "
+
+"
+
+[node name="compteur_jeu" type="Label" parent="CenterContainer" unique_id=180040592]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -104.0
+offset_right = 269.0
+offset_bottom = -38.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_uwoio")
+theme_override_font_sizes/font_size = 32
+text = "Jeux disponibles : 0"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer" unique_id=1969387954]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -44.0
+offset_right = 20.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_hf66k")
+follow_focus = true
+scroll_horizontal = 5
+vertical_scroll_mode = 0
+
+[node name="barredejeu" type="HBoxContainer" parent="CenterContainer/ScrollContainer" unique_id=1176175152]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=923470427]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button2" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=173092558]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button3" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=232184777]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button4" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=452571489]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button5" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=509423270]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button6" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=813226292]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button7" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=1809275221]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button8" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=693917006]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button9" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=1192493032]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button10" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=1876123331]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button11" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=2142199144]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button12" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=1926754881]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button13" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=1159988512]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button14" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=1557541581]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button15" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=1831489045]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="Button16" type="Button" parent="CenterContainer/ScrollContainer/barredejeu" unique_id=1371895269]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
+
+[node name="api" type="HBoxContainer" parent="CenterContainer" unique_id=304794954]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -556.0
+offset_top = -366.0
+offset_right = 1357.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.6, 0.6)
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="youtube" type="Button" parent="CenterContainer/api" unique_id=555812257]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_y6cj8")
+icon = ExtResource("4_qee8x")
+
+[node name="chrome" type="Button" parent="CenterContainer/api" unique_id=1434319879]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_qee8x")
+icon = ExtResource("5_y6cj8")
+
+[node name="inu-shop" type="Button" parent="CenterContainer/api" unique_id=1102482369]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe3x5")
+icon = ExtResource("6_y6cj8")
+
+[node name="overlay" type="ColorRect" parent="." unique_id=1501052987]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+color = Color(0, 0, 0, 0.67058825)
+
+[node name="popupreseau" type="ColorRect" parent="overlay" unique_id=1238128867]
+unique_name_in_owner = true
+process_mode = 3
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+color = Color(0.3647059, 0.3647059, 0.3647059, 0.8156863)
+
+[node name="statut" type="Label" parent="overlay/popupreseau" unique_id=61561254]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -138.5
+offset_right = 138.5
+offset_bottom = 23.0
+grow_horizontal = 2
+focus_mode = 2
+text = "Etat de la connexion : Non connecté"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="overlay/popupreseau" unique_id=2041754510]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 50.0
+offset_bottom = 350.0
+grow_horizontal = 2
+focus_mode = 2
+vertical_scroll_mode = 2
+
+[node name="listewifi" type="VBoxContainer" parent="overlay/popupreseau/ScrollContainer" unique_id=2136746941]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="overlay/popupreseau" unique_id=2123262712]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 2
+
+[node name="Déconnexion" type="Button" parent="overlay/popupreseau/HBoxContainer" unique_id=662806149]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_u7ocy")
+text = "Se déconnecter"
+
+[node name="wpa_cli" type="Button" parent="overlay/popupreseau/HBoxContainer" unique_id=888025345]
+layout_mode = 2
+text = "Connexion via WPS"
+
+[node name="wifipsswd" type="ColorRect" parent="overlay" unique_id=1872357751]
+process_mode = 3
+visible = false
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -150.0
+offset_right = 250.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16862746, 0.16862746, 0.16862746, 1)
+
+[node name="Label" type="Label" parent="overlay/wifipsswd" unique_id=1834596058]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 71.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "Connexion au réseau : 
+"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="overlay/wifipsswd" unique_id=1017923933]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_behavior_recursive = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_rij8k")
+placeholder_text = "Entrez le mot de passe"
+keep_editing_on_text_submit = true
+emoji_menu_enabled = false
+select_all_on_focus = true
+secret = true
+
+[node name="valider" type="Button" parent="overlay/wifipsswd" unique_id=524114754]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -83.0
+offset_top = -51.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Valider"
+
+[node name="quitter" type="Button" parent="overlay/wifipsswd" unique_id=993851880]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -56.0
+offset_right = 99.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Quitter"
+
+[node name="popupmanette" type="ColorRect" parent="overlay" unique_id=1131654674]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+color = Color(0.3647059, 0.3647059, 0.3647059, 0.8156863)
+
+[node name="Label" type="Label" parent="overlay/popupmanette" unique_id=354344794]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -182.5
+offset_right = 182.5
+offset_bottom = 46.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_uwoio")
+theme_override_font_sizes/font_size = 32
+text = "Maintenez L+R de la manette"
+
+[node name="fondgris" type="ColorRect" parent="overlay/popupmanette" unique_id=2028808740]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.70796657, 0.7079665, 0.7079665, 1)
+
+[node name="conteneurslots" type="HBoxContainer" parent="overlay/popupmanette" unique_id=927869866]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="slot1" type="PanelContainer" parent="overlay/popupmanette/conteneurslots" unique_id=1360751173]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="overlay/popupmanette/conteneurslots/slot1" unique_id=1038684597]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_u7ocy")
+
+[node name="slot2" type="PanelContainer" parent="overlay/popupmanette/conteneurslots" unique_id=1208864977]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="overlay/popupmanette/conteneurslots/slot2" unique_id=1066863796]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_u7ocy")
+
+[node name="slot3" type="PanelContainer" parent="overlay/popupmanette/conteneurslots" unique_id=710432455]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="overlay/popupmanette/conteneurslots/slot3" unique_id=855929183]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_u7ocy")
+
+[node name="barrebasse" type="Label" parent="overlay/popupmanette" unique_id=434082328]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_uwoio")
+theme_override_font_sizes/font_size = 32
+text = "Appuyez sur A pour fermer"
+
+[node name="clavier" type="PanelContainer" parent="overlay" unique_id=578467827]
+process_mode = 3
+visible = false
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -502.0
+offset_top = -332.0
+offset_right = 502.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gr7w5")
+script = ExtResource("18_1yvax")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="overlay/clavier" unique_id=1033288012]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="overlay/clavier/VBoxContainer" unique_id=653155846]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer" unique_id=1274570744]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "q"
+
+[node name="Button2" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer" unique_id=1596437762]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "w"
+
+[node name="Button3" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer" unique_id=924376156]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "e"
+
+[node name="Button4" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer" unique_id=522316442]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "r"
+
+[node name="Button5" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer" unique_id=132862228]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "t"
+
+[node name="Button6" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer" unique_id=1148364608]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "y
+"
+
+[node name="Button7" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer" unique_id=522192600]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "u"
+
+[node name="Button8" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer" unique_id=2021708184]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "i"
+
+[node name="Button9" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer" unique_id=1240174862]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "o"
+
+[node name="Button10" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer" unique_id=1091736773]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "p"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="overlay/clavier/VBoxContainer" unique_id=1494897803]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Button2" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer2" unique_id=1445043313]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "a"
+
+[node name="Button3" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer2" unique_id=767777325]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "s"
+
+[node name="Button4" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer2" unique_id=1406349631]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "d"
+
+[node name="Button5" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer2" unique_id=1219397128]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "f"
+
+[node name="Button6" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer2" unique_id=2072297534]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "g"
+
+[node name="Button7" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer2" unique_id=1234747745]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "g"
+
+[node name="Button8" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer2" unique_id=50800805]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "h"
+
+[node name="Button9" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer2" unique_id=2105206156]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "j"
+
+[node name="Button10" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer2" unique_id=1451191521]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "k"
+
+[node name="Button11" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer2" unique_id=1060192019]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "l"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="overlay/clavier/VBoxContainer" unique_id=1152510398]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer3" unique_id=1987616710]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "z"
+
+[node name="Button3" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer3" unique_id=421347583]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "x"
+
+[node name="Button4" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer3" unique_id=1494880946]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "c"
+
+[node name="Button5" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer3" unique_id=119512312]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "v"
+
+[node name="Button6" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer3" unique_id=1212229872]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "b"
+
+[node name="Button7" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer3" unique_id=605683475]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "n"
+
+[node name="Button8" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer3" unique_id=1199440675]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "m"
+
+[node name="Button9" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer3" unique_id=1364421874]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Backspace"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="overlay/clavier/VBoxContainer" unique_id=666790800]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer4" unique_id=142937900]
+custom_minimum_size = Vector2(500, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Espace"
+
+[node name="Button4" type="Button" parent="overlay/clavier/VBoxContainer/HBoxContainer4" unique_id=2074665265]
+custom_minimum_size = Vector2(500, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Entrer"
+
+[connection signal="focus_entered" from="CenterContainer/barre_reg/HBoxContainer/TextureButton" to="CenterContainer/barre_reg/HBoxContainer/TextureButton" method="_on_texture_butto_focus_entered"]
+[connection signal="pressed" from="CenterContainer/barre_reg/HBoxContainer/TextureButton" to="." method="_on_bouton_manette_pressed"]
+[connection signal="focus_entered" from="CenterContainer/barre_reg/HBoxContainer/TextureButton2" to="CenterContainer/barre_reg/HBoxContainer/TextureButton2" method="_on_texture_butto_focus_entered"]
+[connection signal="pressed" from="CenterContainer/barre_reg/HBoxContainer/TextureButton2" to="." method="_on_bouton_reseau_pressed"]
+[connection signal="focus_entered" from="CenterContainer/barre_reg/HBoxContainer/TextureButton3" to="CenterContainer/barre_reg/HBoxContainer/TextureButton3" method="_on_texture_butto_focus_entered"]
+[connection signal="focus_entered" from="CenterContainer/barre_reg/HBoxContainer/TextureButton4" to="CenterContainer/barre_reg/HBoxContainer/TextureButton4" method="_on_texture_butto_focus_entered"]
+[connection signal="pressed" from="CenterContainer/api/youtube" to="." method="_on_youtube_button_pressed"]
+[connection signal="pressed" from="CenterContainer/api/chrome" to="." method="_on_google_button_pressed"]
+[connection signal="pressed" from="CenterContainer/api/inu-shop" to="." method="_on_inushop_pressed"]
+[connection signal="pressed" from="overlay/popupreseau/HBoxContainer/Déconnexion" to="." method="_on_bouton_deconnexion_pressed"]
+[connection signal="pressed" from="overlay/popupreseau/HBoxContainer/wpa_cli" to="." method="_on_wpa_cli_pressed"]
+[connection signal="pressed" from="overlay/wifipsswd/valider" to="." method="_on_bouton_valider_pressed"]
+[connection signal="pressed" from="overlay/wifipsswd/quitter" to="." method="_on_bouton_quitter_pressed"]
